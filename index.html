@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JFG</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<h1>JFG</h1>
+	<label for="address-input">Enter your wallet address:</label>
+	<input type="text" id="address-input">
+	<button id="submit-button">Submit</button>
+	<canvas id="balance-chart"></canvas>
+
+	<script>
+		const API_KEY = "YQUACTZGI12F373NTZE4MGE28N9KMSB2RX";
+		const BASE_URL = "https://api.etherscan.io/api";
+		const ETHER_VALUE = 10 ** 18;
+
+		const balanceChart = new Chart(document.getElementById("balance-chart"), {
+			type: 'line',
+			data: {
+				labels: [],
+				datasets: [{
+					label: 'ETH Balance',
+					data: [],
+					borderColor: 'blue',
+					fill: false
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Ethereum Balance over Time'
+				},
+				scales: {
+					xAxes: [{
+						type: 'time',
+						time: {
+							displayFormats: {
+								month: 'MMM YYYY'
+							}
+						},
+						scaleLabel: {
+							display: true,
+							labelString: 'Date'
+						}
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'ETH Balance'
+						}
+					}]
+				}
+			}
+		});
+
+		document.getElementById("submit-button").addEventListener("click", function() {
+			const address = document.getElementById("address-input").value;
+			const balanceUrl = makeApiUrl("account", "balance", address, {tag: "latest"});
+
+			fetch(balanceUrl)
+				.then(response => response.json())
+				.then(data => {
+					const balance = data.result / ETHER_VALUE;
+					const transactionsUrl = makeApiUrl("account", "txlist", address, {startblock: 0, endblock: 99999999, page: 1, offset: 10000, sort: "asc"});
+
+					fetch(transactionsUrl)
+						.then(response2 => response2.json())
+						.then(data2 => {
+							const internalTxUrl = makeApiUrl("account", "txlistinternal", address, {startblock: 0, endblock: 99999999, page: 1, offset: 10000, sort: "asc"});
+
+							fetch(internalTxUrl)
+								.then(response3 => response3.json())
+								.then(data3 => {
+									const allData = data2.result.concat(data3.result);
+									allData.sort((a, b) => a.timeStamp - b.timeStamp);
+
+									let currentBalance = 0;
+									const balances = [];
+									const times = [];
+
+									allData.forEach(tx => {
+										const to = tx.to;
+										const fromAddr = tx.from;
+										const value = Number(tx.value) / ETHER_VALUE;
+                                        const timestamp = Number(tx.timeStamp) * 1000;
+                                        if (fromAddr.toLowerCase() === address.toLowerCase()) {
+										currentBalance -= value;
+									} else if (to.toLowerCase() === address.toLowerCase()) {
+										currentBalance += value;
+									}
+
+									balances.push(currentBalance.toFixed(4));
+									times.push(new Date(timestamp));
+								});
+
+								balanceChart.data.labels = times;
+								balanceChart.data.datasets[0].data = balances;
+								balanceChart.update();
+							})
+							.catch(error => console.log("Error fetching internal transactions: ", error));
+					})
+					.catch(error => console.log("Error fetching transactions: ", error));
+			})
+			.catch(error => console.log("Error fetching balance: ", error));
+	});
+
+	function makeApiUrl(module, action, address, params) {
+		let url = `${BASE_URL}?module=${module}&action=${action}&address=${address}&apikey=${API_KEY}`;
+
+		for (let [key, value] of Object.entries(params)) {
+			url += `&${key}=${value}`;
+		}
+
+		return url;
+	}
+</script>
+</body>
+</html>
