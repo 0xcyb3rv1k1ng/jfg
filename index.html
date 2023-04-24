@@ -4,13 +4,26 @@
 	<title>JFG</title>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> 
+	<link rel="stylesheet" href="myStyle.css">
+	<link href="https://fonts.cdnfonts.com/css/euclid-circular-b" rel="stylesheet">
 </head>
 <body>
-	<h1>JFG</h1>
-	<label for="address-input">Enter your wallet address:</label>
-	<input type="text" id="address-input">
-	<button id="submit-button">Submit</button>
-	<canvas id="balance-chart"></canvas>
+	<div class="alignment">
+		<h1>JFG</h1>
+		<label for="address-input"></label>
+		<input type="text" id="address-input" placeholder="Enter your wallet address...">
+		<button id="submit-button">Submit</button>
+
+		<div class="chart-container">
+		<canvas id="balance-chart"></canvas>
+		</div>
+
+		<div class="inputField">
+		<input type="text" id="address-input" placeholder="Enter your wallet address..." >
+		<button id="submit-button">Submit</button>
+		</div>
+
+	</div>
 
 	<script>
 		const API_KEY = "YQUACTZGI12F373NTZE4MGE28N9KMSB2RX";
@@ -24,7 +37,13 @@
 				datasets: [{
 					label: 'ETH Balance',
 					data: [],
-					borderColor: 'blue',
+					
+					<!--Color of the line on the graph-->
+					borderColor: '#4F87F6',
+					borderWidth: 4,
+					hoverBorderColor: 'white',
+					hoverBorderWidth: 2,
+					
 					fill: false
 				}]
 			},
