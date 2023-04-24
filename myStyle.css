@@ -1,1 +1,92 @@
 
+
+/* Set body styles */
+body {
+    font-family: 'Euclid Circular B';
+    margin: 0;
+    padding: 0;
+    background-color:#101213;
+}
+
+/* Style the header */
+h1 {
+    font-weight: bold;
+    color: #f9fcfb;
+    font-size: 170%;
+    width: 80%;
+}
+
+/* Style the form */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
+
+/* Chart box*/
+.chart-container {
+    border: 10px solid #1e1f25;
+    background-color:#1e1f25;
+    border-radius: 20px;
+    display: block;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  input{
+    width: 335px;
+    background-color: #101213;
+    border-radius: 100px;
+    height: 35px;
+    border: 1px solid #eff3f7;
+    color: #eef4f9;
+    border-color: #3E3F4B;
+   margin-right: 1px;
+   text-indent: 10px;
+   
+}
+
+/* This makes changes to the Input field and the button as a pair*/
+.inputField{
+   
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 80%;
+  
+}
+
+
+button {
+    background-color: #4F87F6;
+    color: #FFFFFF;
+    margin-left: 5px;
+    border-radius: 100px;
+    border: 2px solid #4F87F6;
+    width: 100px;
+     height: 35px;
+     font-size: 14px;
+    font-family: 'Euclid Circular B';
+    font-weight: 500;
+    
+}
+
+button:hover {
+    background-color:  #293CAE;
+   border: 1px solid #293CAE;
+   
+}
+
+/* Aligns the h1 and input box with the chart*/
+.alignment{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
