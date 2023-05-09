@@ -1,92 +1,197 @@
-
-
 /* Set body styles */
 body {
-    font-family: 'Euclid Circular B';
-    margin: 0;
-    padding: 0;
-    background-color:#101213;
+  font-family: 'Euclid Circular B';
+  margin: 0;
+  padding: 0px;
+  background-color:#101213;
+  padding-left: 0px;
 }
 
 /* Style the header */
 h1 {
-    font-weight: bold;
-    color: #f9fcfb;
-    font-size: 170%;
-    width: 80%;
+  font-weight: bold;
+  color: #f9fcfb;
+  font-size: 170%;
+  width: 72%;
+  padding-top: 1%;
 }
 
 /* Style the form */
 label {
-    display: block;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 
 
 /* Chart box*/
 .chart-container {
-    border: 10px solid #1e1f25;
-    background-color:#1e1f25;
-    border-radius: 20px;
-    display: block;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 80%;
-    margin: 0 auto;
-  }
+  border: 10px solid #1e1f25;
+  background-color:#1e1f25;
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
+  margin-right: 6%;
+  
+  
+}
 
-  input{
-    width: 335px;
-    background-color: #101213;
-    border-radius: 100px;
-    height: 35px;
-    border: 1px solid #eff3f7;
-    color: #eef4f9;
-    border-color: #3E3F4B;
-   margin-right: 1px;
-   text-indent: 10px;
-   
+input{
+  width: 335px;
+  background-color: #101213;
+  border-radius: 100px;
+  height: 35px;
+  border: 1px solid #eff3f7;
+  color: #eef4f9;
+  border-color: #3E3F4B;
+ margin-right: 1px;
+ text-indent: 10px;
+ 
 }
 
 /* This makes changes to the Input field and the button as a pair*/
 .inputField{
-   
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 80%;
+ 
+margin-bottom: 20px;
+margin-top: 20px;
+width: 72%;
+
+}
+
+
+.submit-button {
+  background-color: #4F87F6;
+  color: #FFFFFF;
+  margin-left: 5px;
+  border-radius: 100px;
+  border: 2px solid #4F87F6;
+  width: 100px;
+   height: 35px;
+   font-size: 14px;
+  font-family: 'Euclid Circular B';
+  font-weight: 500;
   
 }
 
-
-button {
-    background-color: #4F87F6;
-    color: #FFFFFF;
-    margin-left: 5px;
-    border-radius: 100px;
-    border: 2px solid #4F87F6;
-    width: 100px;
-     height: 35px;
-     font-size: 14px;
-    font-family: 'Euclid Circular B';
-    font-weight: 500;
-    
-}
-
-button:hover {
-    background-color:  #293CAE;
-   border: 1px solid #293CAE;
-   
+.submit-button:hover {
+  background-color:  #293CAE;
+ border: 1px solid #293CAE;
+ 
 }
 
 /* Aligns the h1 and input box with the chart*/
 .alignment{
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
 
 }
+
+
+
+/*newly added*/
+
+.left-column{
+background-color: #1e1f25;
+
+    float: left;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: -50px;
+    width: 10%;
+    color:#A8ABBE;
+    text-align: left;
+    padding-right: 0px;
+    padding-left: 0;
+    text-indent: 1em;
+
+}
+
+
+@media (max-width: 768px) {
+  .left-column {
+    font-size: 14px; /* decrease font size for smaller screens */
+    width: 80px; /* decrease width for smaller screens */
+  }
+}
+
+
+.left-column-text-align{
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+.mm-logo{
+  margin-top:40px;
+}
+
+.graph-style{
+border-right: 2px solid #4F87F6;
+color:rgb(255, 255, 255);
+font-weight: bold;
+}
+
+.graph-img{
+color: #4F87F6;
+margin-right: 10px;
+display: inline-block;
+vertical-align: middle;
+}
+
+
+.nav-align{
+  margin-bottom:30px;
+}
+
+.nav-icon-align{
+  
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+
+}
+
+.bottom-text{
+  position: absolute;
+  bottom: 200px;
+  }
+
+  
+  .tos{
+
+    position: fixed;
+    bottom:5px;
+    font-size: 14px;
+    border-top: .5px solid #2a2a30;
+    padding-top:20px;
+    text-align: center;
+  }
+
+.dark-mode{
+  background-color: #EBECEE;
+  border-radius: 100px;
+  border:0px;
+ padding-top:3px;
+}
+
+.dark-mode-inside{
+  background-color:#6B6D7B;
+  border-radius: 20px;
+  border: 2px solid #6B6D7B;
+  
+}
+
+.dark-button-align{
+  position: fixed;
+ bottom:100px;
+}
+
+
