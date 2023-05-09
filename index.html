@@ -2,17 +2,141 @@
 <html>
 <head>
 	<title>JFG</title>
+	
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> 
 	<link rel="stylesheet" href="myStyle.css">
 	<link href="https://fonts.cdnfonts.com/css/euclid-circular-b" rel="stylesheet">
 </head>
 <body>
+	
+	
+	<div class="left-column">
+
+		<img class="mm-logo" src="https://portfolio.metamask.io/static/js/../../static/media/portfolio-logo-dark.08cc3f1d5f4b7d89668022814a47623d.svg" alt="MetaMask">
+
+		<div class="left-column-text-align">
+
+			<p class="nav-align">
+				<svg class="nav-icon-align" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10 10L17.5 10M10 2.5L10 17.5M6.5 2.5H13.5C14.9001 2.5 15.6002 2.5 16.135 2.77248C16.6054 3.01217 16.9878 3.39462 17.2275 3.86502C17.5 4.3998 17.5 5.09987 17.5 6.5V13.5C17.5 14.9001 17.5 15.6002 17.2275 16.135C16.9878 16.6054 16.6054 16.9878 16.135 17.2275C15.6002 17.5 14.9001 17.5 13.5 17.5H6.5C5.09987 17.5 4.3998 17.5 3.86502 17.2275C3.39462 16.9878 3.01217 16.6054 2.77248 16.135C2.5 15.6002 2.5 14.9001 2.5 13.5V6.5C2.5 5.09987 2.5 4.3998 2.77248 3.86502C3.01217 3.39462 3.39462 3.01217 3.86502 2.77248C4.3998 2.5 5.09987 2.5 6.5 2.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+				Dashboard
+			</p>
+
+
+			<div class="nav-align">
+			<p class="graph-style">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="graph-img" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+				</svg>
+				
+				Graph
+			</p>
+			</div>
+			
+			<p class="nav-align">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon-align">
+					<circle cx="12" cy="12" r="10"></circle>
+					<line x1="12" y1="8" x2="12" y2="16"></line>
+					<line x1="8" y1="12" x2="16" y2="12"></line>
+				</svg>
+				Buy
+			</p>
+				
+
+
+
+			<p class="nav-align">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon-align">
+					<polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline>
+					<path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+				</svg>
+				
+				Swap
+			</p>
+			
+
+			<p class="nav-align">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="nav-icon-align">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M2.88583 11.0961C2.08173 11.3553 1.5 12.1097 1.5 13C1.5 14.1046 2.39543 15 3.5 15C4.60457 15 5.5 14.1046 5.5 13C5.5 12.2172 5.05025 11.5394 4.39505 11.211C4.98024 8.65597 7.26754 6.75 10 6.75C11.8379 6.75 13.4744 7.61231 14.5271 8.95443C14.9983 8.7242 15.5157 8.57388 16.0616 8.52109C14.7656 6.55072 12.5347 5.25 10 5.25C6.47625 5.25 3.53966 7.7639 2.88583 11.0961ZM18.5 13C18.5 14.1046 17.6046 15 16.5 15C15.3954 15 14.5 14.1046 14.5 13C14.5 11.8954 15.3954 11 16.5 11C17.6046 11 18.5 11.8954 18.5 13Z"></path>
+				</svg>
+			Bridge</p>
+
+
+
+			<p class="nav-align">
+				<svg width="20" height="20" viewBox="0 0 20 20" class="nav-icon-align" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_735_24127)">
+					<path d="M3.99902 19C7.24796 17.5 8.87242 16.75 10.4969 16.75M16.9948 19C13.7458 17.5 12.1214 16.75 10.4969 16.75M10.4969 16.75V11.5M10.4969 11.5L10 10.4091M10.4969 11.5V9.5L10.9967 8.5M10 10.4091C10 10.4091 5.00889 11.0985 2.99935 9.5C1.29118 8.14126 1 4.5 1 4.5C1 4.5 5.55008 3.95155 7.54545 5.90909C8.91802 7.25563 10 10.4091 10 10.4091ZM10.9967 8.5C10.9967 8.5 11.5374 4.11404 13.4959 2.5C15.2137 1.08439 18.9941 1 18.9941 1C18.9941 1 19.1777 5.2683 17.4946 7C15.6792 8.86783 10.9967 8.5 10.9967 8.5Z" stroke-width="1.5" stroke-linecap="round"></path></g>
+					<defs><clipPath id="clip0_735_24127"><rect width="20" height="20" fill="white"></rect></clipPath></defs>
+				</svg>
+				
+				Stake
+			</p>
+
+
+			<p class="nav-align">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon-align"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+				
+				Watchlist
+			</p>
+
+			<p class="nav-align">
+				<svg class="nav-icon-align" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16.8003 5.59272L10.4167 1.90718C10.1589 1.75832 9.84125 1.75832 9.58341 1.90718L3.19987 5.59272C2.94204 5.74158 2.7832 6.01669 2.7832 6.31441V13.6855C2.7832 13.9832 2.94204 14.2583 3.19987 14.4072L9.58342 18.0927C9.84125 18.2416 10.1589 18.2416 10.4167 18.0927L16.8003 14.4072C17.0581 14.2583 17.217 13.9832 17.217 13.6855V6.31441C17.217 6.01669 17.0581 5.74158 16.8003 5.59272Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+					<path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>				
+				
+				Settings
+			</p>
+
+
+
+		<div class="bottom-text">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon-align"><circle cx="12" cy="12" r="10">
+					</circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line>
+				</svg>
+			
+				FAQ
+			</p>
+
+
+			<p class="support">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon-align">
+					<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+				</svg>
+					
+				Support
+			</p>
+
+			<p class="dark-button-align">
+				<button class="dark-mode"  type="button" tabindex="0" aria-checked="true"><svg width="18" height="2" viewBox="0 0 14 14" class="" fill="none" xmlns="http://www.w3.org/2000/svg"></svg><svg width="14" height="14" viewBox="0 0 16 16" class="dark-mode-inside" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M2 8C2 4.13125 5.0091 1 8.71422 1C9.05503 1 9.60525 1.05212 9.94126 1.11706C10.2298 1.17259 10.2938 1.57425 10.0396 1.72456C8.39021 2.70312 7.37618 4.51875 7.37618 6.49375C7.37618 9.92188 10.3676 12.525 13.6254 11.8781C13.9122 11.8217 14.1138 12.1695 13.9287 12.4078C12.6774 14.0187 10.7843 15 8.71422 15C5.0031 15 2 11.8625 2 8Z"></path></svg></button>
+			</p>
+
+			<p class="tos">
+				Terms of Service
+				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+			</p>
+			
+			
+
+				
+
+			</div>
+
+			
+			
+		</div>
+		
+	</div>
+
+	
 	<div class="alignment">
 		<h1>JFG</h1>
 	<div class="inputField">
 		<input type="text" id="address-input" placeholder="Enter your wallet address..." >
-		<button id="submit-button">Submit</button>
+		<button class='submit-button' id="submit-button">Submit</button>
 		</div>
 
 		<div class="chart-container">
