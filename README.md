@@ -35,8 +35,8 @@
 
 ### Prerequisites
 
-You will need an Ethereum Wallet Address to interact with the graph feature. If you would like to interact with this code on your local machine, simply follow the Installation instructions below.
-* 
+You will need an Ethereum Wallet Address to interact with the graph feature. If you would like to interact with this code on your local machine, simply follow the installation instructions below.
+ 
 
 ### Installation
 
