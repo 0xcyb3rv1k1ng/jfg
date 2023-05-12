@@ -35,7 +35,7 @@
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You will need an Ethereum Wallet Address to interact with the graph feature. If you would like to interact with this code on your local machine, simply follow the Installation instructions below.
 * 
 
 ### Installation
@@ -97,9 +97,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Lyssette Fernandez - Project Manager - [@twitter_handle](https://twitter.com/lyssette_f) - lyssette.fernandez@consensys.net
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+JFG: [https://github.com/github_username/repo_name](https://github.com/kji304/jfg/blob/main/index.html)
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
 
@@ -108,15 +108,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- Credits -->
  ## Credits
 <ol>
-    <li>McKay Stevenson </li>
+    <li>Lawrence Jablonski</li>
     <li>Lyssette Fernandez</li>
     <li>Linda Chun</li>
     <li>Ben Eddy</li>
-    <li>Kevin Ingles</li>
-    <li>Travis Forney</li>
-    <li>Heather Savage</li>
     <li>David Garber</li>
-    <li>Lawrence Jablonski</li>
+    <li>Kevin Ingles</li>
   </ol>
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
